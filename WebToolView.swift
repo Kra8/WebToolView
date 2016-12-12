@@ -82,30 +82,30 @@ public class WebToolView : UIView{
         let btnSize  = CGSize(width: 32.0, height: 32.0)
         let btnY    : CGFloat = (self.customHeight - btnSize.height) / 2.0
         let prevX   : CGFloat = 16.0
-        let nextX   : CGFloat = prevX + btnSize.width + 16.0
-        let closeX  : CGFloat = self.frame.size.width - btnSize.width - 16.0
-        let homeX   : CGFloat = closeX - btnSize.width - 16.0
+        let nextX   : CGFloat = prevX + btnSize.width + 32.0
+        let closeX  : CGFloat = self.frame.size.width - btnSize.width - 32.0
+        let homeX   : CGFloat = closeX - btnSize.width - 32.0
         
         self.previousButton.frame.origin.x  = prevX
-        self.previousButton.center.y        = btnY
+        self.previousButton.frame.origin.y  = btnY
         self.previousButton.frame.size      = btnSize
         self.previousButton.tag             = WebToolButtonType.previous.rawValue
         self.previousButton.addTarget(self, action: #selector(self.tappedButton(sender:)), for: .touchDown)
         
         self.nextButton.frame.origin.x      = nextX
-        self.nextButton.center.y            = btnY
+        self.nextButton.frame.origin.y            = btnY
         self.nextButton.frame.size          = btnSize
         self.nextButton.tag                 = WebToolButtonType.next.rawValue
         self.nextButton.addTarget(self, action: #selector(self.tappedButton(sender:)), for: .touchDown)
         
         self.homeButton.frame.origin.x      = homeX
-        self.homeButton.center.y            = btnY
+        self.homeButton.frame.origin.y      = btnY
         self.homeButton.frame.size          = btnSize
         self.homeButton.tag                 = WebToolButtonType.home.rawValue
         self.homeButton.addTarget(self, action: #selector(self.tappedButton(sender:)), for: .touchDown)
         
         self.closeButton.frame.origin.x     = closeX
-        self.closeButton.center.y           = btnY
+        self.closeButton.frame.origin.y     = btnY
         self.closeButton.frame.size         = btnSize
         self.closeButton.tag                = WebToolButtonType.close.rawValue
         self.closeButton.addTarget(self, action: #selector(self.tappedButton(sender:)), for: .touchDown)
