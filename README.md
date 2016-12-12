@@ -35,3 +35,4 @@ extension ViewController : WebToolViewDelegate {
     }
 }
 ```
+![Sample](https://github.com/Kra8/WebToolView/blob/master/data/ss.png)
